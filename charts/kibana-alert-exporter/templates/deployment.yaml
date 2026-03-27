@@ -6,6 +6,9 @@ metadata:
     {{- include "kibana-alert-exporter.labels" . | nindent 4 }}
 spec:
   replicas: {{ .Values.replicaCount }}
+  {{- with .Values.revisionHistoryLimit }}
+  revisionHistoryLimit: {{ . }}
+  {{- end }}
   selector:
     matchLabels:
       {{- include "kibana-alert-exporter.selectorLabels" . | nindent 6 }}

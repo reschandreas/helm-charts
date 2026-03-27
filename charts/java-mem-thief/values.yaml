@@ -3,6 +3,8 @@
 # Declare variables to be passed into your templates.
 
 replicaCount: 1
+revisionHistoryLimit: 3
+
 fileSize: 250
 interval: 15
 runs: 100
